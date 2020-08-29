@@ -269,12 +269,11 @@ ItemDisplay[ring MAG]: %NAME% %GRAY%[%ILVL%]
 ItemDisplay[amu MAG]: %NAME% %GRAY%[%ILVL%]
 
 //Jewels
+ItemDisplay[jew MAG !ID ILVL=39]: %TAN%»%WHITE%» %BLUE%%NAME%%WHITE% [%ILVL%] «%TAN%«
 ItemDisplay[jew MAG !ID]: %TAN%»%WHITE%» %BLUE%%NAME%%WHITE% «%TAN%«
 ItemDisplay[jew RARE !ID]: %TAN%»» %YELLOW%%NAME%%TAN% ««
-ItemDisplay[jew MAG]: %NAME% %GRAY%[%ILVL%]
-
-// Show jewels that are exactly i39 (potential Scintillating Jewels of Fervor)
 ItemDisplay[jew MAG ILVL=39]: %NAME% %WHITE%[%ILVL%]
+ItemDisplay[jew MAG]: %NAME% %GRAY%[%ILVL%]
 
 //Craftables
 ItemDisplay[(ARMOR OR WEAPON) !(NMAG OR MAG OR RARE OR SET OR UNI)]: %NAME%
