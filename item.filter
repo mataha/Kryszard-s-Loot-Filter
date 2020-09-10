@@ -20,23 +20,23 @@ ItemDisplay[(ARMOR OR WEAPON) (MAG OR RARE OR SET OR UNI) SOCK>0]: %NAME% %TAN%[
 //Health & Mana Potions
 ItemDisplay[rvl]: %PURPLE%R %WHITE%70%
 ItemDisplay[rvs]: %PURPLE%r %WHITE%35%
-ItemDisplay[hp5]: %RED%!%WHITE%Hp
-ItemDisplay[mp5]: %BLUE%!%WHITE%Mp
 ItemDisplay[hp1 DIFFICULTY=0]: %RED%!%WHITE%minor hp
 ItemDisplay[hp2 DIFFICULTY=0]: %RED%!%WHITE%light hp
 ItemDisplay[hp3 DIFFICULTY=0]: %RED%!%WHITE%healing
 ItemDisplay[hp4 DIFFICULTY<2]: %RED%!%WHITE%great hp
+ItemDisplay[hp5 CLVL<91]: %RED%!%WHITE%Hp
 ItemDisplay[mp1 DIFFICULTY=0]: %BLUE%!%WHITE%minor mp
 ItemDisplay[mp2 DIFFICULTY=0]: %BLUE%!%WHITE%light mp
 ItemDisplay[mp3 DIFFICULTY=0]: %BLUE%!%WHITE%mana
 ItemDisplay[mp4 DIFFICULTY<2]: %BLUE%!%WHITE%great mp
+ItemDisplay[mp5 CLVL<91]: %BLUE%!%WHITE%Mp
 ItemDisplay[(hp1 OR hp2 OR hp3 OR mp1 OR mp2 OR mp3) DIFFICULTY>0]:
 ItemDisplay[(hp4 OR mp4) DIFFICULTY>1]:
 ItemDisplay[(hp5 OR mp5) CLVL>90]:
 
 //Utilites
-ItemDisplay[tsc]: %BLUE%°%GRAY%tp
-ItemDisplay[isc]: %RED%°%GRAY%id
+ItemDisplay[tsc CLVL<19]: %BLUE%°%GRAY%tp
+ItemDisplay[isc CLVL<19]: %RED%°%GRAY%id
 ItemDisplay[(tsc OR isc) CLVL>18]:
 ItemDisplay[vps CLVL<41]: %GREEN%!%WHITE%stamina
 ItemDisplay[vps CLVL>40]:
@@ -44,7 +44,7 @@ ItemDisplay[wms CLVL<61]: %GREEN%!%WHITE%thaw
 ItemDisplay[wms CLVL>60]:
 ItemDisplay[yps CLVL<81]: %GREEN%!%WHITE%a
 ItemDisplay[yps CLVL>80]:
-ItemDisplay[key]: %GRAY%key
+//ItemDisplay[key]: %GRAY%key
 //Choking, Exploding, Fulminating, Oil, Rancid, Strangling
 ItemDisplay[(gpm OR opm OR opl OR ops OR gps OR gpl) CLVL>23]:
 
@@ -269,14 +269,10 @@ ItemDisplay[cm1 OR cm2 OR cm3]: %NAME% %GRAY%[%ILVL%]
 ItemDisplay[cm2 !ID]:
 
 //Rings and amulets
-ItemDisplay[rin RARE !ID]: %TAN%»» %YELLOW%%NAME%%TAN% ««
-ItemDisplay[amu RARE !ID]: %TAN%»» %YELLOW%%NAME%%TAN% ««
-ItemDisplay[ring MAG ILVL>90]: %NAME% %WHITE%[%ILVL%]
-ItemDisplay[amu MAG ILVL>90]: %NAME% %WHITE%[%ILVL%]
-
-//Hide rings and amulets below i91 (crafting)
-ItemDisplay[ring MAG]:
-ItemDisplay[amu MAG]:
+ItemDisplay[(rin OR amu) RARE !ID]: %TAN%»» %YELLOW%%NAME%%TAN% ««
+ItemDisplay[(ring OR amu) MAG ILVL<91 !ID]:
+ItemDisplay[(ring OR amu) MAG ILVL>90]: %NAME% %WHITE%[%ILVL%]
+ItemDisplay[(ring OR amu) MAG]: %NAME% %GRAY%[%ILVL%]
 
 //Jewels
 ItemDisplay[jew MAG !ID ILVL=39]: %TAN%»%WHITE%» %BLUE%%NAME%%WHITE% [%ILVL%] «%TAN%«
