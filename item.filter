@@ -32,18 +32,24 @@ ItemDisplay[mp3 DIFFICULTY=0]: %BLUE%!%WHITE%mana
 ItemDisplay[mp4 DIFFICULTY<2]: %BLUE%!%WHITE%great mp
 ItemDisplay[(hp1 OR hp2 OR hp3 OR mp1 OR mp2 OR mp3) DIFFICULTY>0]:
 ItemDisplay[(hp4 OR mp4) DIFFICULTY>1]:
+ItemDisplay[(hp5 OR mp5) CLVL>90]:
 
 //Utilites
 ItemDisplay[tsc]: %BLUE%°%GRAY%tp
 ItemDisplay[isc]: %RED%°%GRAY%id
+ItemDisplay[(tsc OR isc) CLVL>18]:
 ItemDisplay[vps CLVL<41]: %GREEN%!%WHITE%stamina
 ItemDisplay[vps CLVL>40]:
 ItemDisplay[wms CLVL<61]: %GREEN%!%WHITE%thaw
 ItemDisplay[wms CLVL>60]:
-ItemDisplay[yps]: %GREEN%!%WHITE%a
+ItemDisplay[yps CLVL<81]: %GREEN%!%WHITE%a
+ItemDisplay[yps CLVL>80]:
 ItemDisplay[key]: %GRAY%key
 //Choking, Exploding, Fulminating, Oil, Rancid, Strangling
 ItemDisplay[(gpm OR opm OR opl OR ops OR gps OR gpl) CLVL>23]:
+
+//TODO: Find a way to filter this based on class played (Assassin)
+ItemDisplay[key]:
 
 //Essences
 ItemDisplay[tes]: %NAME% %GRAY%[Andariel]
@@ -255,18 +261,22 @@ ItemDisplay[cm3 TABSK48>0]: %PURPLE%Trap Skiller %GRAY%[%ILVL%]
 //All Charms
 ItemDisplay[cm3 !ID ILVL>90]: %NAME% %PURPLE%°°° %ORANGE%[%WHITE%%ILVL%%ORANGE%]
 ItemDisplay[cm1 !ID]: %NAME% %PURPLE%° %GRAY%[%ILVL%]
-ItemDisplay[cm2 !ID]: %NAME% %PURPLE%°° %GRAY%[%ILVL%]
 ItemDisplay[cm3 !ID]: %NAME% %PURPLE%°°° %GRAY%[%ILVL%]
 ItemDisplay[cm3 ILVL>90]: %NAME% %ORANGE%[%WHITE%%ILVL%%ORANGE%]
 ItemDisplay[cm1 OR cm2 OR cm3]: %NAME% %GRAY%[%ILVL%]
+
+//Hide large charms
+ItemDisplay[cm2 !ID]:
 
 //Rings and amulets
 ItemDisplay[rin RARE !ID]: %TAN%»» %YELLOW%%NAME%%TAN% ««
 ItemDisplay[amu RARE !ID]: %TAN%»» %YELLOW%%NAME%%TAN% ««
 ItemDisplay[ring MAG ILVL>90]: %NAME% %WHITE%[%ILVL%]
 ItemDisplay[amu MAG ILVL>90]: %NAME% %WHITE%[%ILVL%]
-ItemDisplay[ring MAG]: %NAME% %GRAY%[%ILVL%]
-ItemDisplay[amu MAG]: %NAME% %GRAY%[%ILVL%]
+
+//Hide rings and amulets below i91 (crafting)
+ItemDisplay[ring MAG]:
+ItemDisplay[amu MAG]:
 
 //Jewels
 ItemDisplay[jew MAG !ID ILVL=39]: %TAN%»%WHITE%» %BLUE%%NAME%%WHITE% [%ILVL%] «%TAN%«
