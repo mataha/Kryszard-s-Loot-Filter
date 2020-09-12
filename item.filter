@@ -273,6 +273,8 @@ ItemDisplay[(rin OR amu) RARE !ID]: %TAN%»» %YELLOW%%NAME%%TAN% ««
 ItemDisplay[(ring OR amu) MAG ILVL<91 !ID]:
 ItemDisplay[(ring OR amu) MAG ILVL>90]: %NAME% %WHITE%[%ILVL%]
 ItemDisplay[(ring OR amu) MAG]: %NAME% %GRAY%[%ILVL%]
+ItemDisplay[(ring OR amu) !(NMAG OR MAG OR RARE OR SET OR UNI) ILVL>90]: %NAME% %WHITE%[%ILVL%]
+ItemDisplay[(ring OR amu) !(NMAG OR MAG OR RARE OR SET OR UNI)]: %NAME% %GRAY%[%ILVL%]
 
 //Jewels
 ItemDisplay[jew MAG !ID ILVL=39]: %TAN%»%WHITE%» %BLUE%%NAME%%WHITE% [%ILVL%] «%TAN%«
